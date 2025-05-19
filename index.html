@@ -1,1 +1,59 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body>
+	<main>
+		
+		<div class="state-manager"></div>
+		<div class="content">
+			<div id="filter-div"></div>
+			<div class="center-div">
+				<div class="page-manager center" id="p-m-up"></div>
+				<div id="collection-menu"></div>
+				<section class="cards-data center"></section>
+				<div class="page-manager center" id="p-m-bottom"></div>
+				<div class="card-modal"></div>				
+			</div>
+			<div id="deck-builder"></div>
+		</div>
+		
+		<div id="decklist-manager"></div>
+		<div id="collection-manager"></div>
+	</main>
+	
+	
+	<!-- <div>
+		<select name="player-deck" id="player-deck">
+
+		</select>
+		<select name="cpu-deck" id="cpu-deck">
+			
+		</select>
+	</div>
+	<div id="board">
+		<p></p>
+	</div> -->
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script> var exports = {}; </script>
+	<script type="module" src="/key.js"></script>
+	<script type="module" src="/ts/api/Api.js"></script>
+	<script type="module" src="/ts/models/Board.js"></script>
+	<script type="module" src="/ts/models/Card.js"></script>
+	<script type="module" src="/ts/models/Deck.js"></script>
+	<script type="module" src="/ts/models/Player.js"></script>
+	<script type="module" src="/ts/Game.js"></script>
+	<script type="module" src="/ts/App.js"></script>
+	<script type="module" src="/ts/templates/CardModal.js"></script>
+	<script type="module" src="/ts/templates/CardTemplate.js"></script>	
+	<script type="module" src="/ts/templates/PageManager.js"></script>
+</body>
+</html>

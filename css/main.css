@@ -1,0 +1,429 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+	margin: 0;
+}
+
+.center {
+	text-align: center;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+}
+
+
+/* PAGE MANAGER */
+div.page-manager {
+	display: flex;
+	justify-content: center;
+}
+div.page-manager#p-m-up {
+	border-bottom: 2px black solid;
+	padding: 1rem 0;
+}
+div.page-manager#p-m-bottom {
+	border-top: 2px black solid;
+	padding-top: 1rem;
+}
+div.page-manager > div {
+	display: block;
+}
+
+div.page-manager button:hover{
+	background-color: #b3b3b3;
+}
+div.page-manager > div > button {
+	background: linear-gradient(rgb(250, 196, 196) 0 50%, white 50% 100%);
+}
+div.page-manager > div > button:hover {
+	background: linear-gradient(rgb(250, 140, 140) 0 50%, white 50% 100%);
+}
+div.page-manager button.first-page {
+	padding: 0.5rem 0.5rem 0.5rem 1rem;
+	border-radius:  2rem 0 0 2rem;
+}
+div.page-manager button.previous-page {
+	padding: 0.5rem 0;
+	border-radius: 0;
+}
+div.page-manager button.next-page {
+	padding: 0.5rem 0;
+	border-radius: 0;
+}
+div.page-manager button.last-page {
+	padding: 0.5rem 1rem 0.5rem 0.5rem;
+	border-radius: 0 2rem 2rem 0;
+}
+div.page-manager > div.pm-div-2 {
+	padding: 0.5rem 0;
+}
+div.page-manager span.page-count {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+/* STATE MANAGER */
+div.state-manager {
+	border-bottom: 2px solid black;
+	background-color: #ffffff;
+	text-align: center;
+	padding: 0.75rem 0;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+/* FILTERS */
+
+div#filter-div div.select-container {
+	position: relative;
+}
+div#filter-div div#collection-loader {
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: dashed black 1px;
+}
+
+div#filter-div {
+	justify-content: center;
+	min-width: 21vw;
+	padding: 1rem;
+	border-right: 3px solid black;
+	height: 100vh;
+	overflow: scroll;
+}
+div#filter-div input {
+	max-width: 100%;
+}
+button.submit-filters {
+	padding: 0.5rem;
+}
+
+button.reset-filters {
+	padding: 0.5rem;
+	margin: 1rem auto;
+}
+
+
+div.filter-field{
+	padding: 1rem 0;
+	border-bottom: 1px rgb(87, 87, 87) dashed;
+}
+
+div#filter-div #filter-convertedRetreatCost {
+	white-space: normal;
+}
+div#filter-div #filter-convertedRetreatCost input{
+	margin-right: 0;
+}
+
+div#filter-div button.toggle-expand {
+	/* position: absolute; */
+	top: 0;
+	right:0;
+}
+div#filter-div fieldset{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+div#filter-div fieldset#filter-subtype{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+div#filter-div fieldset#filter-subtype div{
+	flex-basis: 50%;
+}
+div#filter-div fieldset#filter-convertedRetreatCost{	
+	display: inline-block;
+}
+div#filter-div fieldset#filter-convertedRetreatCost div{
+	display: inline-block;
+}
+
+#filter-hp-slider-range span {
+	background: linear-gradient(rgb(248, 47, 47) 0 50%, white 50% 100%)
+	;
+	border-radius: 1rem;
+	border: solid 1px black;
+}
+
+.ui-slider-handle {
+	background: rgb(0, 120, 226);
+}
+
+
+
+
+
+/* MODAL */
+.modal-on {
+	z-index: 3;
+}
+
+/* CARD MODALS */
+div.center-div {
+	position: relative;
+	height: 100vh;
+	overflow: scroll;
+	/* transform: translate(0); */
+}
+
+.card-modal.modal-on {
+    position: fixed;
+    height: 90vh;
+	min-height: 40vh;
+    min-width: 40%;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+    background-color: rgba(219, 219, 219, 0.8);
+}
+.card-modal-wrapper {
+    position: absolute;
+    bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+    bottom: 0;
+}
+.card-modal.modal-on .card-picture img{
+	position: relative;
+	max-height: 80vh;
+	max-width: 35vw;
+}
+/* .modal-on .card-picture{
+	margin: 3rem 2rem;
+} */
+
+.card-modal.modal-on .close-btn {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+	font-size: 1.5rem;
+	font-weight: bold;
+    transform: translateX(-50%);
+    background-color: #ff0000;
+    color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    height: 2rem;
+    width: 6rem;
+    transition: .4s;
+    cursor: pointer;
+}
+
+
+/* CARD DETAILS */
+
+section.cards-data {
+    margin: 0;
+	padding: 0;
+    display: flex;
+	flex-wrap: wrap;
+	flex-grow: 3;
+	justify-content: space-evenly;
+}
+div.center-div .cards-data .card-template{	
+    /* margin-left: 1.1%;
+    margin-right: 1.1%; */
+	max-width: 24%;
+	min-width: 22%;
+}
+@media screen and (max-width: 1200px) {
+	div.center-div .cards-data .card-template {
+		max-width: 31%;
+		min-width: 28%;
+	}
+}
+@media screen and (max-width: 768px) {
+	div.center-div .cards-data .card-template {
+		max-width: 48%;
+		min-width: 5vw;
+	}
+}
+
+
+
+.cards-data .card-picture img { 
+	width: 100%;  
+    object-fit: contain;
+	border-radius: 3%;
+    box-shadow: 4px 5px 5px rgba(51, 51, 51, 50%);
+}
+
+.cards-data .card-name {
+	font-size: calc(0.8vw + 0.5rem);
+	font-weight: 600;
+	display: flex;
+	justify-content: space-between;
+	margin: 0.5rem 0 0.25rem 0.25rem;
+	text-align:start;
+	max-width:100%;
+}
+
+.cards-data .card-name span.name{
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.cards-data .card-name div.deck-count{
+	font-size: calc(0.75vw + 0.4rem);
+	display: flex;
+	flex-wrap: nowrap;
+	margin: auto 0;
+	padding: 0;
+}
+
+.cards-data .card-name div.deck-count button{
+	font-size: 1rem;
+	text-align: center;
+	max-height: 80%;
+	padding: 0 2%;
+	justify-content: center;
+}
+
+div#deck-builder .cards-data .card-template {
+	max-width: 48%;
+}
+@media screen and (max-width: 768px) {
+	div#deck-builder .cards-data .card-template {
+		max-width: 90%;
+	}
+}
+div#deck-builder .cards-data .card-name {
+	font-size: calc(0.6vw + 0.3rem);
+}
+div#deck-builder .cards-data .card-name div.deck-count{
+	font-size: calc(0.6vw + 0.3rem);
+}
+
+/* DECK-BUILDER */
+div#deck-builder section.cards-data {
+    display: block;
+}
+div#deck-builder section.cards-data .sub-section {
+	margin: 0;
+	padding: 0;
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;	
+}
+div#deck-builder section.cards-data h3{
+	border-top: 2px dashed black;
+	border-bottom: 2px dashed black;
+	padding: 2.5% 0;
+}
+div#deck-builder.visible {
+	max-width: 20vw;
+	min-width: 18vw;
+	text-align: center;
+	height: 100vh;
+	overflow: scroll;
+}
+@media screen and (max-width: 1200px) {
+	div#deck-builder.visible {
+		max-width: 25vw;
+		min-width: 20vw;
+	}
+}
+div#deck-builder.visible h2#decklist-name{
+	font-size: 1.25rem;
+	font-weight: 600;
+	justify-content: center;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+div#deck-builder.visible i.fa-pen-to-square{
+	margin: 0 2%;
+}
+
+/* DECK & COLLECTION LIST*/
+
+:is(#decklist-manager, #collection-manager).modal-on {
+	position: fixed;
+	top:0;
+	left:0;
+	background-color: white;
+	height: 100%;
+	width: 100%;
+}
+:is(#decklist-manager, #collection-manager) {
+	text-align: center;
+}
+:is(#decklist-manager, #collection-manager) > button {
+	margin: 0.5rem;
+}
+:is(div.decklist-container, div.collection-container) {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+:is(div.decklist-container, div.collection-container) > .deck-container{
+	width: 12%;
+	border: solid black 2px;
+	margin: 1rem 2rem;
+	position: relative;
+}
+:is(div.decklist-container, div.collection-container) .decklist{
+	text-align: center;
+	margin: 1rem 2rem;
+}
+:is(div.decklist-container, div.collection-container) button.delete-btn{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 1.4rem;
+}
+:is(div.decklist-container, div.collection-container) .decklist > i.fa-box-archive{
+	font-size: 6rem;
+}
+:is(div.decklist-container, div.collection-container) .decklist > p{
+	margin: 0.25rem;
+}
+:is(div.decklist-container, div.collection-container) .decklist > p.decklist-name{
+	overflow: hidden;
+}
+
+
+
+/* COLLECTION MENU*/
+div#collection-menu.visible{
+	display: flex;
+	flex-wrap: nowrap;
+	vertical-align: center;
+	text-align: center;
+	border-bottom: 2px black solid;
+}
+div#collection-menu h2 {
+	margin: auto 0;
+}
+div#collection-menu button {
+	padding: auto;
+}
+div#collection-menu #collection-cards-count{
+	display: flex;
+	flex-grow: 3;
+}
+div#collection-menu #collection-cards-count > p{
+	width: 25%;
+	border: solid 1px black ;
+}
+.center-div h3 {
+	text-align: center;
+}
+
+
+
+
+
+
+
